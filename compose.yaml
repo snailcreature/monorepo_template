@@ -1,0 +1,16 @@
+services:
+  client:
+    build:
+      dockerfile: Dockerfile.client
+    ports:
+      - "8080:8080"
+    networks:
+      - internal
+  server:
+    build:
+      dockerfile: Dockerfile.server
+    networks:
+      - internal
+networks:
+  internal:
+    driver: bridge

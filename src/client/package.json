@@ -1,0 +1,25 @@
+{
+  "name": "client",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "start": "pnpm exec http-server build"
+  },
+  "_moduleAliases": {
+    "@enums": "build/enums",
+    "@utils": "build/utils"
+  },
+  "dependencies": {
+    "common": "workspace:*",
+    "http-server": "^14.1.1",
+    "module-alias": "^2.2.3"
+  },
+  "devDependencies": {
+    "typescript": "~5.7.2",
+    "vite": "^6.2.0"
+  }
+}
