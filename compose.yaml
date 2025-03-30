@@ -6,11 +6,18 @@ services:
       - "8080:8080"
     networks:
       - internal
+    environment:
+      - _APP_URL=$SERVICE_FQDN_CLIENT
+      - SERVER_URL=$SERVICE_FQDN_SERVER
   server:
     build:
       dockerfile: Dockerfile.server
+    ports:
+      - "3000:3000"
     networks:
       - internal
+    environment:
+      - _APP_URL=$SERVICE_FQDN_SERVER
 networks:
   internal:
     driver: bridge

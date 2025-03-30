@@ -7,7 +7,7 @@ APIInteractor.config({
     headers: {
         "Content-type": "application/json",
     },
-    baseUrl: "/api",
+    baseUrl: "http://localhost:3000/api",
 })
 
 export const API = {
