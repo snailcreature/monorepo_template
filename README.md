@@ -21,12 +21,12 @@ A basic pnpm monorepo template that makes use of pnpm workspaces and Docker Comp
 ## Deployment
 
 1. Ensure all required PRs are merged into the `main` branch.
-2. Update versioning in the four (4) `package.json`s and `CHANGELOG.md` using the [CalVer](https://calver.org/) format `YYYY.0M.0D-MICRO`.
+2. Update versioning in the four (4) `package.json`s ([root](package.json), [client](src/client/package.json), [common](src/common/package.json), and [server](src/server/package.json)), the [`compose.yaml`](compose.yaml), and the [`CHANGELOG.md`](CHANGELOG.md) using the [CalVer](https://calver.org/) format `YYYY.0M.0D-MICRO`.
 3. Push versioning changes.
 4. Run `git tag -a "YYYY.0M.0D-MICRO" -m "see CHANGELOG"`
 5. Run `git push --tags`
 
 Manual deployment can be done by running `pnpm run build` and uploading the resulting `./src/<package>/build` folders to your hosting platform of choice.
 
-Alternatively you can deploy the project automatically using [Docker Compose](). You can test this locally by running `docker compose build` followed by `docker compose up`.
+Alternatively you can deploy the project automatically using [Docker Compose](https://docs.docker.com/compose/). You can test this locally by running `docker compose build` followed by `docker compose up`.
 
