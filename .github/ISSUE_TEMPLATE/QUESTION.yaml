@@ -1,0 +1,41 @@
+name: I Have a Question
+description: Ask a question about usage.
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a new feature idea!
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What is the short version of your question?
+      placeholder: Why are there unicorns?
+    validations:
+      required: true
+  - type: textarea
+    id: expanded-question
+    attributes:
+      label: Detailed Question
+      description: What is the long version of your question?
+  - type: textarea
+    id: already-tried
+    attributes:
+      label: Already Tried...
+      description: Where have you already looked for the answer? What have you already tried?
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What is the urgency of your question?
+      multiple: false
+      options:
+        - Emergency (need answer ASAP)
+        - Very High (need answer in 3 hours or less)
+        - High (need answer in 12 hours or less)
+        - Moderate (need answer within 3 business days)
+        - Low (need answer within 7 business days)
+        - Very Low (need answer within 2 business weeks)
+        - Just Curious (need answer at some point)
+      default: 3

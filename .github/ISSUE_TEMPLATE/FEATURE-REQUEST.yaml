@@ -1,0 +1,39 @@
+name: Feature Request
+description: Submit an idea for a feature
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a new feature idea!
+  - type: textarea
+    id: basic-idea
+    attributes:
+      label: Basic Idea
+      description: Summarise your request in 20 words or less.
+      placeholder: Give us unicorns!
+      value: "I have an idea!"
+    validations:
+      required: true
+  - type: textarea
+    id: expanded-idea
+    attributes:
+      label: Expanded Idea
+      description: Give a more detailed overview of your idea.
+    validations:
+      required: true
+  - type: textarea
+    id: reasoning-pro
+    attributes:
+      label: Why should we add your idea?
+      description: What are the benefits of your idea being added?
+    validations:
+      required: true
+  - type: textarea
+    id: reasoning-con
+    attributes:
+      label: Why *shouldn't* we add your idea?
+      description: What are the drawbacks of your idea being added?
+    validations:
+      required: true
