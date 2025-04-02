@@ -8,8 +8,16 @@ FROM base AS build
 COPY . /usr/src/app
 WORKDIR /usr/src/app
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store echo "y" | pnpm install --frozen-lockfile
-RUN pnpm run client -r build
+RUN pnpm run build
 RUN pnpm run client deploy /prod/client
+RUN pnpm run server deploy /prod/server
+
+FROM base AS server
+COPY --from=build /prod/server /prod/server
+WORKDIR /prod/server
+RUN ls
+EXPOSE 3000
+CMD [ "pnpm", "start" ]
 
 FROM base AS client
 COPY --from=build /prod/client /prod/client
