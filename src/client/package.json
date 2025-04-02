@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "start": "pnpm exec http-server build"
   },
+  "packageManager": "pnpm@10.7.1",
   "_moduleAliases": {
     "@enums": "build/enums",
     "@utils": "build/utils"
