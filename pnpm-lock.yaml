@@ -47,6 +47,9 @@ importers:
       concurrently:
         specifier: ^9.1.2
         version: 9.1.2
+      cross-env:
+        specifier: ^7.0.3
+        version: 7.0.3
       eslint:
         specifier: ^9.23.0
         version: 9.23.0
@@ -68,6 +71,9 @@ importers:
       module-alias:
         specifier: ^2.2.3
         version: 2.2.3
+    dependenciesMeta:
+      common:
+        injected: true
     devDependencies:
       typescript:
         specifier: ~5.7.2
@@ -110,6 +116,9 @@ importers:
       uuid4:
         specifier: ^2.0.3
         version: 2.0.3
+    dependenciesMeta:
+      common:
+        injected: true
     devDependencies:
       '@types/koa':
         specifier: ^2.15.0
@@ -743,6 +752,11 @@ packages:
   corser@2.0.1:
     resolution: {integrity: sha512-utCYNzRSQIZNPIcGZdQc92UVJYAhtGAteCFg0yRaFm8f0P+CPtyGyHXJcGXnffjCybUCEx3FQ2G7U3/o9eIkVQ==}
     engines: {node: '>= 0.4.0'}
+
+  cross-env@7.0.3:
+    resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
+    engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
+    hasBin: true
 
   cross-spawn@7.0.6:
     resolution: {integrity: sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==}
@@ -2199,6 +2213,10 @@ snapshots:
       keygrip: 1.1.0
 
   corser@2.0.1: {}
+
+  cross-env@7.0.3:
+    dependencies:
+      cross-spawn: 7.0.6
 
   cross-spawn@7.0.6:
     dependencies:

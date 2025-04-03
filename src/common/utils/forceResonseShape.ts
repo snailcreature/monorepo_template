@@ -1,4 +1,4 @@
-import { Result } from "common/@types"
+import { Result } from "../@types"
 
 /**
  * Wraps a given function to ensure it matches the expected Result

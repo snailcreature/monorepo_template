@@ -7,6 +7,7 @@ A basic pnpm monorepo template that makes use of pnpm workspaces and Docker Comp
 1. Create a new git repo with this one as a template.
 2. Ensure you have [`pnpm` installed](https://pnpm.io/).
 3. Clone your repo locally and run `pnpm install` in the local copy.
+4. Run `cp .env.template .env`
 
 > [!NOTE] To install dependencies in the `server`, `common`, and `client` packages run `pnpm run <package> add <dependency>`
 
@@ -21,7 +22,7 @@ A basic pnpm monorepo template that makes use of pnpm workspaces and Docker Comp
 ## Deployment
 
 1. Ensure all required PRs are merged into the `main` branch.
-2. Update versioning in the four (4) `package.json`s ([root](package.json), [client](src/client/package.json), [common](src/common/package.json), and [server](src/server/package.json)), the [`compose.yaml`](compose.yaml), and the [`CHANGELOG.md`](CHANGELOG.md) using the [CalVer](https://calver.org/) format `YYYY.0M.0D-MICRO`.
+2. Update versioning in the major [`package.json`](package.json), the [`compose.yaml`](compose.yaml), and the [`CHANGELOG.md`](CHANGELOG.md) using the [CalVer](https://calver.org/) format `YYYY.0M.0D-MICRO`.
 3. Push versioning changes.
 4. Run `git tag -a "YYYY.0M.0D-MICRO" -m "see CHANGELOG"`
 5. Run `git push --tags`

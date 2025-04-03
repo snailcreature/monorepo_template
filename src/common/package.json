@@ -1,6 +1,5 @@
 {
   "name": "common",
-  "version": "2025.04.02-0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,5 +8,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.7.0"
+  "packageManager": "pnpm@10.7.1"
 }

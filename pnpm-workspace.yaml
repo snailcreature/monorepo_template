@@ -2,4 +2,3 @@ packages:
   - src/*
 onlyBuiltDependencies:
   - esbuild
-inject-workspace-packages: true

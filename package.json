@@ -8,8 +8,8 @@
     "server": "pnpm --filter=server",
     "client": "pnpm --filter=client",
     "common": "pnpm --filter=common",
-    "dev:server": "pnpm run server dev",
-    "dev:client": "pnpm run client dev",
+    "dev:server": "cross-env ENV_FILE=.env.develop pnpm run server dev",
+    "dev:client": "cross-env ENV_FILE=.env.develop pnpm run client dev",
     "build": "pnpm run server build && pnpm run client build",
     "dev": "conc -n server,client -c magenta,blue \"pnpm run dev:server\" \"pnpm run dev:client\"",
     "lint": "eslint . --max-warnings 0",
@@ -39,6 +39,7 @@
     "@typescript-eslint/eslint-plugin": "^8.29.0",
     "@typescript-eslint/parser": "^8.29.0",
     "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
     "eslint": "^9.23.0",
     "globals": "^16.0.0",
     "prettier": "^3.5.3"
