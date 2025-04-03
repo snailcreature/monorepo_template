@@ -7,7 +7,8 @@ A basic pnpm monorepo template that makes use of pnpm workspaces and Docker Comp
 1. Create a new git repo with this one as a template.
 2. Ensure you have [`pnpm` installed](https://pnpm.io/).
 3. Clone your repo locally and run `pnpm install` in the local copy.
-4. Run `cp .env.template .env`
+4. Run `cp .env.template .env` (`.env` is used for local testing of production/staging environment)
+5. Run `cp .env.template .env.develop` (for local development and testing)
 
 > [!NOTE] To install dependencies in the `server`, `common`, and `client` packages run `pnpm run <package> add <dependency>`
 

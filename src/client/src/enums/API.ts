@@ -7,7 +7,7 @@ APIInteractor.config({
     headers: {
         "Content-type": "application/json",
     },
-    baseUrl: "http://localhost:3000/api",
+    baseUrl: `${import.meta.env.VITE_SERVER_URL}/api`,
 })
 
 export const API = {

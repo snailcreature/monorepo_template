@@ -1,10 +1,11 @@
+import config from "./config"
 import api from "./api"
 import log from "./utils/log"
 
-api.listen(3000)
+api.listen(config.port)
 log(
     {
         variant: "info",
     },
-    `server listening on port ${3000}`
+    `server listening on port ${config.port}`
 )
