@@ -68,6 +68,9 @@ importers:
       http-server:
         specifier: ^14.1.1
         version: 14.1.1
+      luxon:
+        specifier: ^3.6.0
+        version: 3.6.1
       module-alias:
         specifier: ^2.2.3
         version: 2.2.3
@@ -75,6 +78,9 @@ importers:
       common:
         injected: true
     devDependencies:
+      '@types/luxon':
+        specifier: ^3.4.2
+        version: 3.4.2
       typescript:
         specifier: ~5.7.2
         version: 5.7.3
@@ -2903,6 +2909,7 @@ snapshots:
       '@koa/cors': 5.0.0
       '@koa/router': 13.1.0
       common: file:src/common
+      dotenv: 16.4.7
       knex: 3.1.0
       koa: 2.16.0
       koa-helmet: 8.0.1(helmet@8.1.0)
