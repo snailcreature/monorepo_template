@@ -14,9 +14,10 @@ export default defineConfig({
     outDir: './build',
   },
   server: {
+    port: process.env.VITE_PORT ?? 8080,
     proxy: {
         '/api': {
-            target: 'http://localhost:3000',
+            target: process.env.VITE_SERVER_URL,
             changeOrigin: true,
             secure: false,
         }

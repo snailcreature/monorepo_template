@@ -11,7 +11,7 @@
     "dev:server": "cross-env ENV_FILE=.env.develop pnpm run server dev",
     "dev:client": "cross-env ENV_FILE=.env.develop pnpm run client dev",
     "build": "pnpm run server build && pnpm run client build",
-    "dev": "conc -n server,client -c magenta,blue \"pnpm run dev:server\" \"pnpm run dev:client\"",
+    "dev": "cross-env ENV_FILE=.env.develop conc -n server,client -c magenta,blue \"pnpm run dev:server\" \"pnpm run dev:client\"",
     "lint": "eslint . --max-warnings 0",
     "prettier": "pnpm exec prettier . --write"
   },

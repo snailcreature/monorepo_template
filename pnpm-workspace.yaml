@@ -2,3 +2,5 @@ packages:
   - src/*
 onlyBuiltDependencies:
   - esbuild
+executionEnv:
+  envFile: .env
