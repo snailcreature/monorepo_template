@@ -9,7 +9,7 @@ const routes = new Router({
 routes.get("/health-check", async (ctx: ParameterizedContext) => {
     ctx.status = 200
     ctx.body = {
-        error: false,
+        ok: true,
         data: true,
     } as Result<boolean>
 })

@@ -1,10 +1,10 @@
 type Err<T = string> = {
-    error: true
-    result: T
+    ok: false
+    error: T
 }
 
 type Ok<T> = {
-    error: false
+    ok: true
     data: T
 }
 

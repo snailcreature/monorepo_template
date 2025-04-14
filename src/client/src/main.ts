@@ -6,8 +6,8 @@ import { API } from "@enums/API"
 ;(async () => {
     const health = await API.healthCheck()
 
-    if (health.error) {
-        console.error(health.result)
+    if (!health.ok) {
+        console.error(health.error)
         return
     }
 
